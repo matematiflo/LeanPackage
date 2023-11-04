@@ -57,11 +57,19 @@ You can then go directly to the [Test file](#test-file) instructions.
 
 The last two steps are taken from the [Lean Manual](https://lean-lang.org/lean4/doc/setup.html#lake). They are enough for the command `./build/bin/greeting` to work and return `Hello, world!`. You do not need to have created a GitHub repo for this to work.
 
-The `lake init greeting` command adds Lean to the current directory and creates a Lean package called `greeting`. You can see for instance that the files `lean-toolchain` and `lakefile.lean` have been created.
+The `lake init greeting` command adds Lean to the current directory and creates a Lean package called `greeting`. You can see for instance that the files `lean-toolchain` and `lakefile.lean` have been created. You can check that this has worked by running the commands
 
-The `lake build` command then compiles the package into a binary called `greeting`, which is later run by the command `./build/bin/greeting`. If you do this, you will get a repo with a structure similar to this one, except for the `HelloWorld.lean`, `Test.lean` and `MathlibTest.lean` files.
+```console
+cat lean-toolchain
+```
 
-However, the content of the files `Main.lean`, `Greeting/Basic.lean` and `lakefile.lean` have been slightly modified in the present repo:
+```console
+cat lakefile.lean
+```
+
+The command `lake build` then compiles the package into a binary called `greeting`, which is later run by the command `./build/bin/greeting`.
+
+If you do all of this, you will get a repo with a structure similar to this one, except that the files `HelloWorld.lean`, `Test.lean` and `MathlibTest.lean` will be absent from it, as they are not created by `lake init greeting`. Moreover, in the present repo, the files `Main.lean`, `Greeting/Basic.lean` and `lakefile.lean` have been slightly edited:
 
 - In `Main.lean`, the definition `IO.println s!"Hello, {hello}!"` has been replaced by `IO.println s!"Hello, {MyHello}!"`.
 - In `Greeting/Basic.lean`, the declaration `def hello := "world"` has been replaced by `def MyHello := "User"
@@ -238,7 +246,7 @@ import Mathlib.Data.List.Defs
 
 The function `List.sum` computes the sum of the members of a list. It is defined in `Mathlib.Data.List.Defs`, which is part of Mathlib.
 
-If you run `lean MathibTest.lean` or even `lake env lean MathlibTest.lean` before installing Mathlib, you will see a list of error messages, starting with one that says `unknown package 'Mathlib'`).
+If you run `lake env lean MathlibTest.lean` before installing Mathlib, you will see a list of error messages, starting with one that says `unknown package 'Mathlib'`).
 
 To add a mathlib dependency, do the following.
 
@@ -270,6 +278,8 @@ Run the following command to replace your `lean-toolchain` file with the one use
 curl https://raw.githubusercontent.com/leanprover-community/mathlib4/master/lean-toolchain -o lean-toolchain
 ```
 
+Unless you are already using the same Lean version as Mathlib, this updates the `lean-toolchain` file. You can see it by running `cat lean-toolchain`.
+
 ### Install Mathlib
 
 Run the command line
@@ -288,7 +298,7 @@ Run the command line
 lake exe cache get
 ```
 
-This downloads the Mathlib libraries, so you can avoid building Mathlib locally (which takes a long time). In principle, though, this can be done via the command `lake build MathlibTest.lean`.
+This downloads the compiled Mathlib library files, so you can avoid compiling them locally (which can take a long time). As a matter of fact, if you indeed use `lake exe cache get` (which is recommended), then you do not need to use `lake update` before that: `lake exe cache get` will both install Mathlib and download the compiled library files.
 
 You can consult the [Leanprover-community](https://leanprover-community.github.io) Wiki for more info:
 
@@ -299,7 +309,7 @@ You can consult the [Leanprover-community](https://leanprover-community.github.i
 After downloading the compiled Mathlib libraries using `lake exe cache get`, run the `MathlibTest.lean` file, via the command line
 
 ```console
-lean MathlibTest.lean
+lake env lean MathlibTest.lean
 ```
 
 This computes `List.sum [1, 2, 3]` and you should get the answer `6`, because `1 + 2 + 3 = 6`.
