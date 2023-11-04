@@ -232,7 +232,7 @@ There is a [Lean 4 extension](https://marketplace.visualstudio.com/items?itemNam
 
 ## Adding Mathlib
 
-If you want to add Mathlib to the present project, follow the instructions below.
+If you want to add Mathlib to the present package, follow the instructions below.
 
 ### Mathlib test file
 
