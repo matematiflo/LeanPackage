@@ -1,6 +1,6 @@
 # Lean Template repository
 
-This sets up a basic Lean package on your machine, without a Mathlib dependency. If you want to add Mathlib as a dependency afterwards, see [Adding Mathlib](#adding-mathlib).
+This sets up a basic Lean package without a Mathlib dependency. If you want to add Mathlib as a dependency afterwards, see [Adding Mathlib](#adding-mathlib).
 
 ## Quickstart
 
@@ -298,7 +298,7 @@ Run the command line
 lake exe cache get
 ```
 
-This downloads the compiled Mathlib library files, so you can avoid compiling them locally (which can take a long time). As a matter of fact, if you indeed use `lake exe cache get` (which is recommended), then you do not need to use `lake update` before that: `lake exe cache get` will both install Mathlib and download the compiled library files.
+This downloads the compiled Mathlib library files, so you can avoid compiling them locally (which can take a long time). As a matter of fact, if you use `lake exe cache get` (which is recommended), then you do not need to use `lake update` before that: `lake exe cache get` will both install Mathlib and download the compiled library files.
 
 You can consult the [Leanprover-community](https://leanprover-community.github.io) Wiki for more info:
 
