@@ -133,7 +133,7 @@ lean Test.lean --run
 
 then the program returns `#eval main` one more time (at the very end). This enables you to not include an `#eval main` command if you want to run your function `main` only once and at the end, using the `--run` option.
 
-## Installing Lean 4
+## Install Lean 4
 
 You can install [Lean 4](https://github.com/leanprover/lean4) by following the instructions in one of the following sources:
 
@@ -144,7 +144,7 @@ You can install [Lean 4](https://github.com/leanprover/lean4) by following the i
 
 You will need the Lean package manager called [elan](https://github.com/leanprover/elan), to install Lean. How you install elan depends on your operating system.
 
-## On Mac OS
+## Install Lean 4 on Mac OS
 
 For a controlled installation of elan and Lean on Mac OS, see
 
@@ -162,7 +162,7 @@ Otherwise, follow the steps below:
 
 ### Install elan
 
-Install elan by running
+Install elan (the Lean package manager) by running
 
 ```console
 brew install elan-init
@@ -183,10 +183,7 @@ lean --version
 ```
 
 If the stable version is 4.2.0, then the command above should return
-
-```console
-Lean (version 4.2.0, commit 0d7051497ea0, Release)
-```
+`Lean (version 4.2.0, commit 0d7051497ea0, Release)`.
 
 If you want to make the installed version your default version, you can run
 
@@ -208,7 +205,7 @@ elan show
 
 In case of trouble, run `elan help`.
 
-## Homebrew Troubleshooting
+### Homebrew Troubleshooting
 
 If you use `zsh` as a shell in your terminal app, after installing Homebrew, you will need to update your `PATH`. You can do so by following the steps below:
 
@@ -226,7 +223,7 @@ eval $(/opt/homebrew/bin/brew shellenv)
 
 You should be able to check that this has worked by typing in `brew help` in a terminal: this should now be recongnized by your shell.
 
-## In Visual Studio Code
+## Install Lean 4 from within Visual Studio Code
 
 There is a [Lean 4 extension](https://marketplace.visualstudio.com/items?itemName=leanprover.lean4) in [Visual Studio Code](https://code.visualstudio.com/download). It can install [various things](https://lean-lang.org/lean4/doc/quickstart.html) for you directly. And in general, VS Code is a powerful IDE to work on Lean code.
 
@@ -290,7 +287,7 @@ lake update
 
 This will update the Lean version and install a Mathlib dependency in your repo, creating a bunch of new files, including a directory called `lake-packages`.
 
-### Download the compiled Mathlib libraries
+### Download the compiled Mathlib library files
 
 Run the command line
 
