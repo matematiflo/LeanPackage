@@ -1,6 +1,6 @@
 # Lean Template repository
 
-This sets up a basic Lean package without a Mathlib dependency. If you want to add Mathlib as a dependency afterwards, see [Adding Mathlib](#adding-mathlib).
+This sets up a basic Lean package without a Mathlib dependency. If you want to add Mathlib as a dependency afterwards, see [Adding a Mathlib dependency](#adding-a-mathlib-dependency).
 
 ## Quickstart
 
@@ -98,7 +98,9 @@ If you do all of this, you will get a repo with a structure similar to this one,
 - In `Greeting/Basic.lean`, the declaration `def hello := "world"` has been replaced by `def MyHello := "User"`.
 - In `Main.lean`, the definition `IO.println s!"Hello, {hello}!"` has been replaced by `IO.println s!"Hello, {MyHello}!"`.
 
-The quote signs around the imports have also been removed.
+The quote signs around the imports have also been removed. 
+
+If you want to know more about Lake, you can check out [this blob][LakeREADME].
 
 ## Test file
 
@@ -251,7 +253,7 @@ You should be able to check that this has worked by typing in `brew help` in a t
 
 There is a [Lean 4 extension](https://marketplace.visualstudio.com/items?itemName=leanprover.lean4) in [Visual Studio Code](https://code.visualstudio.com/download). It can install [various things](https://lean-lang.org/lean4/doc/quickstart.html) for you directly. And in general, VS Code is a powerful IDE to work on Lean code.
 
-## Adding Mathlib
+## Adding a Mathlib dependency
 
 If you want to add Mathlib to the present package, follow the instructions below.
 
@@ -276,7 +278,8 @@ To add a mathlib dependency, do the following.
 Open the `lakefile.lean` file of the present repo and add to it the following lines
 
 ```lean
-require mathlib from git "https://github.com/leanprover-community/mathlib4.git"
+require mathlib from git 
+  "https://github.com/leanprover-community/mathlib4.git"
 ```
 
 in between the `package` and `lean_lib` lines, to make it look like this:
@@ -285,7 +288,8 @@ in between the `package` and `lean_lib` lines, to make it look like this:
 package greeting where
   -- add package configuration options here
 
-require mathlib from git "https://github.com/leanprover-community/mathlib4.git"
+require mathlib from git 
+  "https://github.com/leanprover-community/mathlib4.git"
 
 lean_lib Greeting where
   -- add library configuration options here
@@ -334,3 +338,5 @@ lake env lean MathlibTest.lean
 ```
 
 This computes `List.sum [1, 2, 3]` and you should get the answer `6`, because `1 + 2 + 3 = 6`.
+
+[LakeREADME]: https://github.com/leanprover/lean4/blob/691113ca7ca7d8ae263f9f6932365ad34452d910/src/lake/README.md
