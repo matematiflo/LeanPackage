@@ -20,13 +20,13 @@ It should return `Hello, world!`.
 
 ## Running a program
 
-To try out the main function of the present package,  run the command line
+To try out the main function of the present package,  first build it via the command line
 
 ```console
 lake build Main
 ```
 
-followed by
+then run the main function via the command line
 
 ```console
 lake env lean --run Main.lean
@@ -38,7 +38,7 @@ Alternately, you can compile `Main.lean` into an executable via the command
 lake build
 ```
 
-and then run
+and then run the command line
 
 ```console
 .build/bin/UserGreeting
@@ -67,14 +67,38 @@ cat lean-toolchain
 cat lakefile.lean
 ```
 
+The content of `lean-toolchain` should refer to the same Lean version as your default toolchain (check this using `elan show`).
+
+The content of `lakefile.lean` should be as follows.
+
+```lean
+import Lake
+open Lake DSL
+
+package «greeting» where
+  -- add package configuration options here
+
+lean_lib «Greeting» where
+  -- add library configuration options here
+
+@[default_target]
+lean_exe «greeting» where
+  root := `Main
+  -- Enables the use of the Lean interpreter by the executable (e.g.,
+  -- `runFrontend`) at the expense of increased binary size on Linux.
+  -- Remove this line if you do not need such functionality.
+  supportInterpreter := true
+```
+
 The command `lake build` then compiles the package into a binary called `greeting`, which is later run by the command `./build/bin/greeting`.
 
-If you do all of this, you will get a repo with a structure similar to this one, except that the files `HelloWorld.lean`, `Test.lean` and `MathlibTest.lean` will be absent from it, as they are not created by `lake init greeting`. Moreover, in the present repo, the files `Main.lean`, `Greeting/Basic.lean` and `lakefile.lean` have been slightly edited:
+If you do all of this, you will get a repo with a structure similar to this one, except that the files `HelloWorld.lean`, `Test.lean` and `MathlibTest.lean` will be absent from it, as they are not created by `lake init greeting`. Moreover, in the present repo, the files `lakefile.lean`, `Greeting/Basic.lean` and `Main.lean` have been slightly edited:
 
-- In `Main.lean`, the definition `IO.println s!"Hello, {hello}!"` has been replaced by `IO.println s!"Hello, {MyHello}!"`.
-- In `Greeting/Basic.lean`, the declaration `def hello := "world"` has been replaced by `def MyHello := "User"
-`.
 - In `lakefile.lean`, the `lean_exe greeting` has been replaced by `lean_exe UserGreeting`.
+- In `Greeting/Basic.lean`, the declaration `def hello := "world"` has been replaced by `def MyHello := "User"`.
+- In `Main.lean`, the definition `IO.println s!"Hello, {hello}!"` has been replaced by `IO.println s!"Hello, {MyHello}!"`.
+
+The quote signs around the imports have also been removed.
 
 ## Test file
 
