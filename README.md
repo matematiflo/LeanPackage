@@ -98,7 +98,7 @@ If you do all of this, you will get a repo with a structure similar to this one,
 - In `Greeting/Basic.lean`, the declaration `def hello := "world"` has been replaced by `def MyHello := "User"`.
 - In `Main.lean`, the definition `IO.println s!"Hello, {hello}!"` has been replaced by `IO.println s!"Hello, {MyHello}!"`.
 
-The quote signs around the imports have also been removed. 
+The quote signs around the imports have also been removed.
 
 If you want to know more about Lake, you can check out [this blob][LakeREADME].
 
