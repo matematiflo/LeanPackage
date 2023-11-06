@@ -7,7 +7,7 @@ package greeting where
 lean_lib Greeting where
   -- add library configuration options here
 
-@[default_target]
+@[default_target]  -- this makes `lean_exe UserGreeting` the default target of a `lake build` command
 lean_exe UserGreeting where
   root := `Main
   -- Enables the use of the Lean interpreter by the executable (e.g.,
