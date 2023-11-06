@@ -1,4 +1,4 @@
-# Lean Template repository
+# Lean package setup (template repository)
 
 This sets up a basic Lean package without a Mathlib dependency. If you want to add Mathlib as a dependency afterwards, see [Adding a Mathlib dependency](#adding-a-mathlib-dependency).
 
