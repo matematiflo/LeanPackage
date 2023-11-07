@@ -6,13 +6,13 @@ This sets up a basic Lean package without a Mathlib dependency. If you want to a
 
 If you already have [Lean](https://lean-lang.org/) installed on your machine, just clone the current repository, either using [GitHub Desktop]((https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop)) or via the command line
 
-```console
+```bash
 git clone https://github.com/matematiflo/LeanTemplate.git
 ```
 
 Then run the command
 
-```console
+```bash
 lean HelloWorld.lean
 ```
 
@@ -22,25 +22,25 @@ It should return `Hello, world!`.
 
 To try out the main function of the present package,  first build it via the command line
 
-```console
+```bash
 lake build Main
 ```
 
 then run the main function via the command line
 
-```console
+```bash
 lake env lean --run Main.lean
 ```
 
 Alternately, you can compile `Main.lean` into an executable via the command
 
-```console
+```bash
 lake build
 ```
 
 and then run the command line
 
-```console
+```bash
 .build/bin/UserGreeting
 ```
 
@@ -59,11 +59,11 @@ The last two steps are taken from the [Lean Manual](https://lean-lang.org/lean4/
 
 The `lake init greeting` command adds Lean to the current directory and creates a Lean package called `greeting`. You can see for instance that the files `lean-toolchain` and `lakefile.lean` have been created. You can check that this has worked by running the commands
 
-```console
+```bash
 cat lean-toolchain
 ```
 
-```console
+```bash
 cat lakefile.lean
 ```
 
@@ -125,13 +125,13 @@ def f (n : Nat) : Nat := 2 * n
 
 You can run `Test.lean` by running the command
 
-```console
+```bash
 lean Test.lean
 ```
 
 and it should return
 
-```console
+```bash
 Hello, world!
 2
 3 : Nat
@@ -144,7 +144,7 @@ For instance, `#eval f 3` computes the value of `f` at the natural number `3`. S
 
 If you edit the file to uncomment the line `#print f` by removing the `--` at the beginning of that line, you will see the following in your terminal:
 
-```console
+```bash
 def f : Nat → Nat :=
 fun n => 2 * n
 ```
@@ -153,7 +153,7 @@ This means that `f` is a function that takes a natural number `n`  to the natura
 
 Finally, if instead of `lean Test.lean`, you run
 
-```console
+```bash
 lean Test.lean --run
 ```
 
@@ -178,7 +178,7 @@ For a controlled installation of elan and Lean on Mac OS, see
 
 It will require you to install [Homebrew](https://brew.sh) by running the command line:
 
-```console
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
@@ -190,7 +190,7 @@ Otherwise, follow the steps below:
 
 Install elan (the Lean package manager) by running
 
-```console
+```bash
 brew install elan-init
 ```
 
@@ -198,13 +198,13 @@ brew install elan-init
 
 Install the latest stable version of Lean by running
 
-```console
+```bash
 elan install stable
 ```
 
 You may need to log off and log in again to your terminal again to make sure that the commands `lean` and `lake` become available. Check that this is indeed the case by running the command line
 
-```console
+```bash
 lean --version
 ```
 
@@ -213,19 +213,19 @@ If the stable version is 4.2.0, then the command above should return
 
 If you want to make the installed version your default version, you can run
 
-```console
+```bash
 elan default stable
 ```
 
 As a matter of fact, if the stable version is not yet installed, the command above will also install it. You can check which versions (called *toolchains*) you have installed by running
 
-```console
+```bash
 elan toolchain list
 ```
 
 and which one one is the active toolchain by running
 
-```console
+```bash
 elan show
 ```
 
@@ -237,13 +237,13 @@ If you use `zsh` as a shell in your terminal app, after installing Homebrew, you
 
 First, run the command line
 
-```console
+```bash
 echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> /Users/$USER/.zprofile
 ```
 
 Then, run the command line
 
-```console
+```bash
 eval $(/opt/homebrew/bin/brew shellenv)
 ```
 
@@ -299,7 +299,7 @@ lean_lib Greeting where
 
 Run the following command to replace your `lean-toolchain` file with the one used by the version of Mathlib that you are about to install:
 
-```console
+```bash
 curl https://raw.githubusercontent.com/leanprover-community/mathlib4/master/lean-toolchain -o lean-toolchain
 ```
 
@@ -309,7 +309,7 @@ Unless you are already using the same Lean version as Mathlib, this updates the 
 
 Run the command line
 
-```console
+```bash
 lake update
 ```
 
@@ -319,7 +319,7 @@ This will update the Lean version and install a Mathlib dependency in your repo,
 
 Run the command line
 
-```console
+```bash
 lake exe cache get
 ```
 
@@ -333,7 +333,7 @@ You can consult the [Leanprover-community](https://leanprover-community.github.i
 
 After downloading the compiled Mathlib libraries using `lake exe cache get`, run the `MathlibTest.lean` file, via the command line
 
-```console
+```bash
 lake env lean MathlibTest.lean
 ```
 
