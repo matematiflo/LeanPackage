@@ -18,6 +18,8 @@ lean HelloWorld.lean
 
 It should return `Hello, world!`.
 
+If you do not yet have Lean 4, you can test out the present repo in a [Codespace](#codespaces) (follow the link for instructions).
+
 ## Running a program
 
 To try out the main function of the present package,  first build it via the command line
@@ -343,13 +345,13 @@ This computes `List.sum [1, 2, 3]` and you should get the answer `6`, because `1
 
 ## Codespaces
 
-If you wish to test this project online and without installing anything, you can do so by opening a Codespace (**GitHub account required**). Just click on the button below and wait for *a few minutes*.
+If you wish to test the current repo online and without installing anything, you can do so by opening a Codespace (**GitHub account required**). Just click on the button below and wait for *a few minutes*.
 
 [![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?skip_quickstart=true&machine=standardLinux32gb&repo=713890550&ref=main&geo=EuropeWest)
 
 > **Warning:** Codespaces can take as much as 5 to 7 minutes to launch the first time you use it within a given project.
 
-Alternately, you can open a Codespace by clicking on the [Code button](https://github.com/matematiflo/SumsOfSquares) of the current repository (possibly slower, though).
+Alternately, you can open a Codespace by clicking on the [Code button](https://github.com/matematiflo/LeanPackage) of the current repository (possibly slower, though).
 
 If you commit any modified file from within your Codespace, the repo will be forked to your GitHub account and your work will be saved there.
 
