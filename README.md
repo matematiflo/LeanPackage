@@ -355,12 +355,14 @@ This computes `List.sum [1, 2, 3]` and you should get the answer `6`, because `1
 
 ## Codespaces
 
-If you wish to test the current repo online and without installing anything, you can do so by opening a Codespace (**GitHub account required**). Just click on the button below and wait for *a few minutes*.
+If you wish to test the current repo online and without installing anything, you can do so by opening a Codespace (**GitHub account required**). Just click on the button below and follow the instructions below.
 
-[![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?skip_quickstart=true&machine=standardLinux32gb&repo=713890550&ref=main&geo=EuropeWest)
+[![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/matematiflo/LeanPackage)
 
-> **Warning:** Codespaces can take as much as 5 to 7 minutes to launch the first time you use it within a given project.
-
+- Set the Machine type to `4-core`, and then press `Create codespace`.
+- Wait for Codespaces to launch (it can take between 2 and 8 minutes).
+- Once it is done, you should see a VS Code interface in your browser, wait 2 more minutes until the program is done configuring the Codespace.
+  
 Alternately, you can open a Codespace by clicking on the [Code button](https://github.com/matematiflo/LeanPackage) of the current repository (possibly slower, though).
 
 If you commit any modified file from within your Codespace, the repo will be forked to your GitHub account and your work will be saved there.
@@ -378,3 +380,19 @@ Note that the Codespace which has been configured for  this repo does *not* incl
 If you want a template repository with a Codespace for a Lean package that *does* include a Mathlib dependency, you can go to this repo:
 
 > [https://github.com/matematiflo/MathlibDependency](https://github.com/matematiflo/MathlibDependency)
+
+Finally, here is a [direct link]((https://github.com/codespaces/new?skip_quickstart=true&machine=standardLinux32gb&repo=714193192&ref=main&devcontainer_path=.devcontainer%2Fdevcontainer.json&geo=EuropeWest) to the Codespaces configuration used for the present repo. It has been obtained by going to
+
+> [https://github.com/codespaces/new](https://github.com/codespaces/new)
+
+and setting up the following options:
+
+- Repository: `matematiflo/LeanPackage`
+- Branch: `main`
+- Dev container configuration: `LeanPackage dev container`
+- Region: `Europe West`
+- Machine type: `4-core`
+
+You can see and manage all your Codespaces on
+
+> [https://github.com/codespaces](https://github.com/codespaces)
