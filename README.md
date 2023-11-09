@@ -355,12 +355,12 @@ This computes `List.sum [1, 2, 3]` and you should get the answer `6`, because `1
 
 ## Codespaces
 
-If you wish to test the current repo online and without installing anything, you can do so by opening a Codespace (**GitHub account required**). Just click on the button below and follow the instructions below.
+If you wish to test the current repo online and without installing anything, you can do so by opening a Codespace (**GitHub account required**). Just click on the button below and follow the instructions underneath it.
 
 [![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/matematiflo/LeanPackage)
 
 - Set the Machine type to `4-core`, and then press `Create codespace`.
-- Wait for Codespaces to launch (it can take between 2 and 8 minutes).
+- Wait for Codespaces to launch (it can take up to 5 minutes the first time).
 - Once it is done, you should see a VS Code interface in your browser, wait 2 more minutes until the program is done configuring the Codespace.
   
 Alternately, you can open a Codespace by clicking on the [Code button](https://github.com/matematiflo/LeanPackage) of the current repository (possibly slower, though).
