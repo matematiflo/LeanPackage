@@ -59,7 +59,7 @@ You can then go directly to the [Test file](#test-file) instructions.
 
 The last two steps are taken from the [Lean Manual](https://lean-lang.org/lean4/doc/setup.html#lake). They are enough for the command `./build/bin/greeting` to work and return `Hello, world!`. You do not need to have created a GitHub repo for this to work.
 
-The `lake init greeting` command adds Lean to the current directory and creates a Lean package called `greeting`. You can see for instance that the files `lean-toolchain` and `lakefile.lean` have been created. You can check that this has worked by running the commands
+The `lake init greeting` command adds Lean to the repo and creates a Lean package called `greeting`. You can see for instance that the files `lean-toolchain` and `lakefile.lean` have been created. And you can check that this has worked by running the commands
 
 ```bash
 cat lean-toolchain
@@ -69,9 +69,13 @@ cat lean-toolchain
 cat lakefile.lean
 ```
 
-The content of `lean-toolchain` should refer to the same Lean version as your default toolchain (check this using `elan show`).
+The content of `lean-toolchain` should coincide with one of the Lean versions that you have on your machine (check this using `elan show`). Otherwise, you shoudl run the command
 
-The content of `lakefile.lean` should be as follows.
+```bash
+lake update
+```
+
+As for the file `lakefile.lean`, its contente should be as follows.
 
 ```lean
 import Lake
