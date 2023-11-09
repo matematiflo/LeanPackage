@@ -340,3 +340,23 @@ lake env lean MathlibTest.lean
 This computes `List.sum [1, 2, 3]` and you should get the answer `6`, because `1 + 2 + 3 = 6`.
 
 [LakeREADME]: https://github.com/leanprover/lean4/blob/691113ca7ca7d8ae263f9f6932365ad34452d910/src/lake/README.md
+
+## Codespaces
+
+If you wish to test this project online and without installing anything, you can do so by opening a Codespace (**GitHub account required**). Just click on the button below and wait for *a few minutes*.
+
+[![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?skip_quickstart=true&machine=standardLinux32gb&repo=713890550&ref=main&geo=EuropeWest)
+
+> **Warning:** Codespaces can take as much as 5 to 7 minutes to launch the first time you use it within a given project.
+
+Alternately, you can open a Codespace by clicking on the [Code button](https://github.com/matematiflo/SumsOfSquares) of the current repository (possibly slower, though).
+
+If you commit any modified file from within your Codespace, the repo will be forked to your GitHub account and your work will be saved there.
+
+To leave a Codespace, it is recommended that you stop it before closing the browser window:
+
+1. Click on your Codespace name at the bottom-left of the VS Code interface.
+2. Choose `Stop current Codespace` from the list of options.
+3. Wait until the Codespace has stopped to close your browser tab.
+
+To go back to a Codespace that you have created, just go to [https://github.com/codespaces](https://github.com/codespaces) or access them directly from the Code button of the relevant repository (no setup required this time!).
