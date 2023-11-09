@@ -16,9 +16,15 @@ Then run the command
 lean HelloWorld.lean
 ```
 
-It should return `Hello, world!`.
+It should return `Hello, world!`. At this point, you can also run
 
-If you do not yet have Lean 4, you can test out the present repo in a [Codespace](#codespaces) (follow the link for instructions).
+```bash
+lake build
+```
+
+to finish building the projet (see the [next section](#running-a-program) for more on this).
+
+If you do not yet have Lean 4, you can test out the present repo in a [Codespace](#codespaces) (follow the link or read below for instructions).
 
 ## Running a program
 
