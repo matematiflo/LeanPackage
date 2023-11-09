@@ -1,0 +1,15 @@
+{
+    "name": "SumOfSquares dev container",
+
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+
+    "onCreateCommand": "echo \"Installing Lean 4 and building the project. Please be patient, as this takes a few minutes!\" && lake build && echo \"The project is now built! You can open the README file and follow the instructions there :-)\"",
+
+    "customizations": {
+      "vscode" : {
+        "extensions" : [ "leanprover.lean4" ]
+      }
+    }
+  }
