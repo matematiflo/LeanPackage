@@ -381,7 +381,7 @@ If you want a template repository with a Codespace for a Lean package that *does
 
 > [https://github.com/matematiflo/MathlibDependency](https://github.com/matematiflo/MathlibDependency)
 
-Finally, here is a [direct link]((https://github.com/codespaces/new?skip_quickstart=true&machine=standardLinux32gb&repo=714193192&ref=main&devcontainer_path=.devcontainer%2Fdevcontainer.json&geo=EuropeWest) to the Codespaces configuration used for the present repo. It has been obtained by going to
+Finally, here is a [direct link](https://github.com/codespaces/new?skip_quickstart=true&machine=standardLinux32gb&repo=714193192&ref=main&devcontainer_path=.devcontainer%2Fdevcontainer.json&geo=EuropeWest) to the Codespaces configuration used for the present repo. It has been obtained by going to
 
 > [https://github.com/codespaces/new](https://github.com/codespaces/new)
 
