@@ -373,7 +373,11 @@ To leave a Codespace, it is recommended that you stop it before closing the brow
 2. Choose `Stop current Codespace` from the list of options.
 3. Wait until the Codespace has stopped to close your browser tab.
 
-To go back to a Codespace that you have created, just go to [https://github.com/codespaces](https://github.com/codespaces) or access them directly from the Code button of the relevant repository (no setup required this time!).
+To access a Codespace that you have previously created, just go to
+
+> [https://github.com/codespaces](https://github.com/codespaces)
+
+or launch them directly from the Code button of the relevant repository (no setup required this time!).
 
 Note that the Codespace which has been configured for  this repo does *not* include a Mathlib dependency. So you can test out there how to add such a dependency.
 
@@ -392,7 +396,3 @@ and setting up the following options:
 - Dev container configuration: `LeanPackage dev container`
 - Region: `Europe West`
 - Machine type: `4-core`
-
-You can see and manage all your Codespaces on
-
-> [https://github.com/codespaces](https://github.com/codespaces)
