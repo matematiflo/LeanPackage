@@ -7,7 +7,7 @@ This sets up a basic Lean package without a Mathlib dependency. If you want to a
 If you already have [Lean](https://lean-lang.org/) installed on your machine, just clone the current repository, either using [GitHub Desktop]((https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop)) or via the command line
 
 ```bash
-git clone https://github.com/matematiflo/LeanTemplate.git
+git clone https://github.com/matematiflo/LeanPackage.git
 ```
 
 Then run the command
@@ -59,7 +59,7 @@ You can then go directly to the [Test file](#test-file) instructions.
 ## How to build this repo from scratch
 
 1. Create a GitHub repo with an Apache 2.0 license.
-2. Clone the repo on a machine which has Lean 4 already installed on it. Alternately, just create an empty directory `LeanTemplate` on your machine.
+2. Clone the repo on a machine which has Lean 4 already installed on it. Alternately, just create an empty directory `LeanPackage` on your machine.
 3. From a terminal, run the command `lake init greeting` (inside the cloned repo).
 4. Still from a terminal, run the command `lake build`.
 
