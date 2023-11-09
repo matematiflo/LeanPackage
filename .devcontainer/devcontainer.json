@@ -1,5 +1,5 @@
 {
-    "name": "SumOfSquares dev container",
+    "name": "LeanPackage dev container",
 
     "build": {
       "dockerfile": "Dockerfile"
