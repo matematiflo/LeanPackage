@@ -372,3 +372,9 @@ To leave a Codespace, it is recommended that you stop it before closing the brow
 3. Wait until the Codespace has stopped to close your browser tab.
 
 To go back to a Codespace that you have created, just go to [https://github.com/codespaces](https://github.com/codespaces) or access them directly from the Code button of the relevant repository (no setup required this time!).
+
+Note that the Codespace which has been configured for  this repo does *not* include a Mathlib dependency. So you can test out there how to add such a dependency.
+
+If you want a template repository with a Codespace for a Lean package that *does* include a Mathlib dependency, you can go to this repo:
+
+> [https://github.com/matematiflo/MathlibDependency](https://github.com/matematiflo/MathlibDependency)
