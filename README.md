@@ -261,7 +261,7 @@ Then, run the command line
 eval $(/opt/homebrew/bin/brew shellenv)
 ```
 
-You should be able to check that this has worked by typing in `brew help` in a terminal: this should now be recognized by your shell.
+You should be able to check that this has worked by running the command line `brew help` in a terminal: this should now be recognized by your shell.
 
 ## Install Lean 4 from within Visual Studio Code
 
@@ -357,15 +357,11 @@ This computes `List.sum [1, 2, 3]` and you should get the answer `6`, because `1
 
 ## Codespaces
 
-If you wish to test the current repo online and without installing anything, you can do so by opening a Codespace (**GitHub account required**). Just click on the button below and follow the instructions underneath it.
+If you wish to test the current repo online and without installing anything, you can do so by opening a Codespace (**GitHub account required**). Just click on the button below and click on `Create new codespace`
 
 [![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/matematiflo/LeanPackage)
 
-- Set the Machine type to `4-core`, and then press `Create codespace`.
-- Wait for Codespaces to launch (it can take up to 5 minutes the first time).
-- Once it is done, you should see a VS Code interface in your browser, wait 2 more minutes until the program is done configuring the Codespace.
-  
-Alternately, you can open a Codespace by clicking on the [Code button](https://github.com/matematiflo/LeanPackage) of the current repository (possibly slower, though).
+Alternately, you can open a Codespace by clicking on the [Code button](https://github.com/matematiflo/LeanPackage) of the current repository.
 
 If you commit any modified file from within your Codespace, the repo will be forked to your GitHub account and your work will be saved there.
 
@@ -386,15 +382,3 @@ Note that the Codespace which has been configured for  this repo does *not* incl
 If you want a template repository with a Codespace for a Lean package that *does* include a Mathlib dependency, you can go to this repo:
 
 > [https://github.com/matematiflo/MathlibDependency](https://github.com/matematiflo/MathlibDependency)
-
-Finally, here is a [direct link](https://github.com/codespaces/new?skip_quickstart=true&machine=standardLinux32gb&repo=714193192&ref=main&devcontainer_path=.devcontainer%2Fdevcontainer.json&geo=EuropeWest) to the Codespaces configuration used for the present repo. It has been obtained by going to
-
-> [https://github.com/codespaces/new](https://github.com/codespaces/new)
-
-and setting up the following options:
-
-- Repository: `matematiflo/LeanPackage`
-- Branch: `main`
-- Dev container configuration: `LeanPackage dev container`
-- Region: `Europe West`
-- Machine type: `4-core`
