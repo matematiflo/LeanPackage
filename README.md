@@ -359,7 +359,7 @@ This computes `List.sum [1, 2, 3]` and you should get the answer `6`, because `1
 
 If you wish to work on this project online and without installing anything, you can do so by opening a Codespace. Just follow the link below and click on `Create new codespace` (**GitHub account required**).
 
-[![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/matematiflo/LeanPackage)
+[![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new/matematiflo/LeanPackage)
 
 Alternately, you can open a Codespace by clicking on the [Code button](https://github.com/matematiflo/LeanPackage) of the current repository.
 
