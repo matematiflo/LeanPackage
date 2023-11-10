@@ -329,7 +329,7 @@ lake update
 
 This will update the Lean version and install a Mathlib dependency in your repo, creating a bunch of new files, including a directory called `lake-packages`.
 
-### Download the compiled Mathlib library files
+### Download the compiled Mathlib files
 
 Run the command line
 
@@ -337,7 +337,7 @@ Run the command line
 lake exe cache get
 ```
 
-This downloads the compiled Mathlib library files, so you can avoid compiling them locally (which can take a long time). As a matter of fact, if you use `lake exe cache get` (which is recommended), then you do not need to use `lake update` before that: `lake exe cache get` will both install Mathlib and download the compiled library files.
+This downloads the compiled Mathlib files, so you can avoid compiling them locally (which can take a long time). As a matter of fact, if you use `lake exe cache get` (which is recommended), then you do not need to use `lake update` before that: `lake exe cache get` will both install Mathlib and download the compiled library files.
 
 You can consult the [Leanprover-community](https://leanprover-community.github.io) Wiki for more info:
 
@@ -357,7 +357,7 @@ This computes `List.sum [1, 2, 3]` and you should get the answer `6`, because `1
 
 ## Codespaces
 
-If you wish to test the current repo online and without installing anything, you can do so by opening a Codespace (**GitHub account required**). Just click on the button below and click on `Create new codespace`
+If you wish to test the current repo online and without installing anything, you can do so by opening a Codespace (**GitHub account required**). Just click on the button below and click on `Create new codespace`.
 
 [![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/matematiflo/LeanPackage)
 
