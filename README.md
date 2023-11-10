@@ -261,7 +261,7 @@ Then, run the command line
 eval $(/opt/homebrew/bin/brew shellenv)
 ```
 
-You should be able to check that this has worked by typing in `brew help` in a terminal: this should now be recongnized by your shell.
+You should be able to check that this has worked by typing in `brew help` in a terminal: this should now be recognized by your shell.
 
 ## Install Lean 4 from within Visual Studio Code
 
