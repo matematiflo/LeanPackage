@@ -6,7 +6,7 @@ This sets up a basic Lean package without a Mathlib dependency. If you want to a
 
 ## Quickstart
 
-If you already have [Lean](https://lean-lang.org/) installed on your machine, just clone the current repository, either using [GitHub Desktop]((https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop)) or via the command line
+If you *already have* [Lean](https://lean-lang.org/) installed on your machine, just clone the current repository, either using [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop) or via the command line
 
 ```bash
 git clone https://github.com/matematiflo/LeanPackage.git
@@ -83,7 +83,7 @@ The content of `lean-toolchain` should coincide with one of the Lean versions th
 lake update
 ```
 
-As for the file `lakefile.lean`, its contente should be as follows.
+As for the file `lakefile.lean`, its contents should be as follows.
 
 ```lean
 import Lake
