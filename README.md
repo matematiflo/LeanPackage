@@ -51,7 +51,7 @@ lake build
 and then run the command line
 
 ```bash
-.build/bin/UserGreeting
+.lake/build/bin/UserGreeting
 ```
 
 It should return `Hello, User!`.
